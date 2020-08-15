@@ -3,6 +3,7 @@ board = ["-", "-", "-",
          "-", "-", "-",
          "-", "-", "-"]
 
+# Add three Global variables as suggested by the Clever Programmer
 game_still_going = True
 
 winner = None
@@ -33,6 +34,7 @@ def play_game():
 
 
 # Display the game board to the screen
+# Borrowed Clever Programmer's idea to add '1,2,3...9' number display alongside with the board display. 
 def display_board():
   print("\n")
   print(board[0] + " | " + board[1] + " | " + board[2] + "     1 | 2 | 3")
