@@ -26,14 +26,14 @@ def play_game():
 
     flip_player()
   
-  # Since the game is over, print the winner or tie
+  # Show winner or tie
   if winner == "X" or winner == "O":
     print(winner + " won.")
   elif winner == None:
     print("Tie.")
 
 
-# Display the game board to the screen
+# Display the board to the screen
 # Borrowed Clever Programmer's idea to add '1,2,3...9' number display alongside with the board display. 
 def display_board():
   print("\n")
@@ -50,7 +50,7 @@ def change_turn(player):
   position = input("Choose a position from 1-9: ")
 
 
-  # Borrowed Clever Programmer's idea to set Valid option
+  # Borrowed Clever Programmer's idea to flip Valid option from True to False so that the player could alternate easily. 
   valid = False              
   while not valid:
 
