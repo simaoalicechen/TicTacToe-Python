@@ -1,4 +1,4 @@
-# Will hold our game board data
+# The game board layout
 board = ["-", "-", "-",
          "-", "-", "-",
          "-", "-", "-"]
