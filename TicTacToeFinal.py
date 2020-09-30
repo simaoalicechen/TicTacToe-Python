@@ -2,7 +2,32 @@
 board = ["-", "-", "-",
          "-", "-", "-",
          "-", "-", "-"]
+#Play again portion
+def replay():
+    while game_still_going == False:
+        play_again=input("Do you want to play again?(y/n):")
 
+        if play_again=='y':
+            play_game()
+        elif play_again=='n':
+            print("Thank You For Playing Tic Tac Toe.")
+            break
+        else:
+            print("Sorry.You Choosed wrong option.Please Choose again.")
+def resetboard():
+        board[0] = "-"
+        board[1] = "-"
+        board[2] = "-"
+        board[3] = "-"
+        board[4] = "-"
+        board[5] = "-"
+        board[6] = "-"
+        board[7] = "-"
+        board[8] = "-" 
+        display_board()
+        global game_still_going
+        game_still_going = True
+         
 # Add three Global variables as suggested by the Clever Programmer
 game_still_going = True
 
@@ -16,7 +41,7 @@ current_player = "X"
 # Play a game of tic tac toe
 def play_game():
 
-  display_board()
+  resetboard()
 
   while game_still_going:
 
@@ -185,3 +210,5 @@ def flip_player():
 # ------------ Start Execution -------------
 # Play a game of tic tac toe
 play_game()
+#to ask user whether s/he want to play again
+replay()
